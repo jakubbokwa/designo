@@ -14,18 +14,20 @@ import {
 
 const App = () => {
   return (
-    <div style={{ background: "#99b4b4" }}>
+    <div className="flex flex-col h-full justify-between">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/app-design" element={<AppDesign />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/graphic-design" element={<GraphicDesign />} />
-        <Route path="/locations" element={<Locations />} />
-        <Route path="/web-design" element={<WebDesign />} />
-        <Route path="*" element={<Navigate replace to="/" />} />
-      </Routes>
+      <div className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/app-design" element={<AppDesign />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/graphic-design" element={<GraphicDesign />} />
+          <Route path="/locations" element={<Locations />} />
+          <Route path="/web-design" element={<WebDesign />} />
+          <Route path="*" element={<Navigate replace to="/" />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   );

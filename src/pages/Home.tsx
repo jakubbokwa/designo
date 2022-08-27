@@ -1,7 +1,8 @@
 const Home = () => {
   return (
     <div>
-      <p>Home</p>
+      <p>home</p>
+      <img src="/logo/logo-light.png" alt="" />
     </div>
   );
 };
