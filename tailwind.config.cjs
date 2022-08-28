@@ -18,6 +18,7 @@ module.exports = {
       },
       fontSize: {
         base: ["1rem", "1.625rem"],
+        "base-mobile": ["0.9375rem", "1.5625rem"],
         xl: [
           "1.25rem",
           {
@@ -32,6 +33,11 @@ module.exports = {
             lineHeight: "3rem",
           },
         ],
+        "4xl-mobile": ["2rem", "2.25rem"],
+      },
+      spacing: {
+        4.5: "1.125rem",
+        8.5: "2.125rem",
       },
     },
   },

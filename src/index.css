@@ -9,3 +9,13 @@ body {
 #root {
   height: 100%;
 }
+
+.max-w-1440 {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  width: 12.625rem;
+}
