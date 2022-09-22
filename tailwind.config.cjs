@@ -33,12 +33,22 @@ module.exports = {
             lineHeight: "3rem",
           },
         ],
-        "4xl-mobile": ["2rem", "2.25rem"],
+        "4xl-mobile": [
+          "1.75rem",
+          {
+            letterSpacing: "1.4px",
+            lineHeight: "2.25rem",
+          },
+        ],
       },
       spacing: {
         4.5: "1.125rem",
         8.5: "2.125rem",
         21.25: "5.3125rem",
+        30: "7.5rem",
+      },
+      letterSpacing: {
+        "mega-wide": "0.3125em",
       },
     },
   },

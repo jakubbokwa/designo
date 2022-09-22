@@ -1,4 +1,5 @@
 import Button from "../ui/Button";
+
 import ImageHeroPhone from "../../assets/home/desktop/image-hero-phone.png";
 import { ReactComponent as BgPatternHeroHome } from "../../assets/home/desktop/bg-pattern-hero-home.svg";
 
