@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import LogoLight from "../../assets/shared/desktop/logo-light.png";
 
 import links from "../../helpers/links";
@@ -17,11 +19,11 @@ const Footer = () => {
           {links.map((singleLink, index) => {
             const { href, title } = singleLink;
             return (
-              <a key={index} href={href}>
+              <Link key={index} to={href}>
                 <p className="text-base-mobile tracking-widest">
                   {title.toUpperCase()}
                 </p>
-              </a>
+              </Link>
             );
           })}
         </div>
