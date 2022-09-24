@@ -1,17 +1,18 @@
-import { ReactComponent as IconFacebook } from "../../assets/shared/desktop/icon-facebook.svg";
-import { ReactComponent as IconYoutube } from "../../assets/shared/desktop/icon-youtube.svg";
-import { ReactComponent as IconTwitter } from "../../assets/shared/desktop/icon-twitter.svg";
-import { ReactComponent as IconPinterest } from "../../assets/shared/desktop/icon-pinterest.svg";
-import { ReactComponent as IconInstagram } from "../../assets/shared/desktop/icon-instagram.svg";
+import icons from "../../helpers/icons";
 
 const Icons = () => {
   return (
     <div className="flex gap-4">
-      <IconFacebook />
-      <IconYoutube />
-      <IconTwitter />
-      <IconPinterest />
-      <IconInstagram />
+      {icons.map((singleIcon, index) => {
+        const { href, icon } = singleIcon;
+        return (
+          <a key={index} href={href} target="_blank">
+            {icon({
+              className: "text-primary-peach hover:text-secondary-peach",
+            })}
+          </a>
+        );
+      })}
     </div>
   );
 };

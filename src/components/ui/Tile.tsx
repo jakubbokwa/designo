@@ -1,6 +1,8 @@
 import { FC } from "react";
 import { ReactComponent as IconRightArrow } from "../../assets/shared/desktop/icon-right-arrow.svg";
 
+import { Link } from "react-router-dom";
+
 type Props = {
   imageDesktop: string;
   imageTablet: string;
@@ -24,9 +26,9 @@ const Tile: FC<Props> = ({
     <div
       className={`${
         overlay ? "bg-gradient-to-r from-black/[0.35] to-black/[0.35]" : ""
-      } relative overflow-hidden mx-6flex items-center justify-center rounded-2xl`}
+      } relative overflow-hidden mx-6 flex items-center justify-center rounded-2xl`}
     >
-      <a href={href}>
+      <Link to={href}>
         <picture>
           <source media="(min-width:1280px)" srcSet={imageDesktop} />
           <source media="(min-width:768px)" srcSet={imageTablet} />
@@ -36,18 +38,18 @@ const Tile: FC<Props> = ({
             alt=""
           ></img>
         </picture>
-        <div className="absolute top-[90px] w-max left-0 right-0 mx-auto text-center">
+        <div className="absolute top-[90px] md:top-[45px] w-max left-0 right-0 mx-auto text-center flex flex-col md:gap-6">
           <p className="mb-3 text-4xl-mobile md:text-4xl text-white font-medium">
             {text}
           </p>
-          <div className="flex items-center">
+          <div className="flex items-center justify-center">
             <p className="text-base-mobile md:text-base text-white tracking-mega-wide mr-5">
               {subtext}
             </p>
             <IconRightArrow />
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };

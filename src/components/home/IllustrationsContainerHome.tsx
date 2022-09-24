@@ -4,13 +4,15 @@ import { illustrationsHome } from "../../helpers/illustrations";
 
 const IllustrationsContainerHome = () => {
   return (
-    <section>
+    <section className="md:mx-10">
       {illustrationsHome.map((singleIllustration, index) => {
         return (
           <Illustration
             key={index}
             title={singleIllustration.title}
-            followUp={<p>{singleIllustration.followUp}</p>}
+            followUp={
+              <p className="text-base">{singleIllustration.followUp}</p>
+            }
           >
             {singleIllustration.icon}
           </Illustration>

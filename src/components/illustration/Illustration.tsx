@@ -9,15 +9,21 @@ type Props = {
 
 const Illustration: FC<Props> = ({ children, title, followUp }) => {
   return (
-    <div className="flex flex-col items-center text-center mx-6 mb-20 last:mb-0">
+    <div className="flex flex-col md:flex-row items-center text-center mx-6 mb-20 last:mb-0">
       <div className="relative flex justify-center">
         <div className="absolute">
           <PatternSmallCircle />
         </div>
         <div className="relative">{children}</div>
       </div>
-      {title && <h2 className="text-xl mt-10 mb-8">{title}</h2>}
-      <>{followUp && followUp}</>
+      <div className="md:text-left md:ml-12">
+        {title && (
+          <h2 className="text-xl font-medium mt-10 md:mt-0 mb-8 md:mb-4">
+            {title}
+          </h2>
+        )}
+        <>{followUp && followUp}</>
+      </div>
     </div>
   );
 };

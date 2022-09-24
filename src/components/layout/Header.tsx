@@ -15,12 +15,12 @@ const Header = () => {
         <div className="md:hidden">
           <Hamburger />
         </div>
-        <div className="hidden md:flex bg-red-300 gap-10.5">
+        <div className="hidden md:flex gap-10.5 text-base-mobile tracking-widest">
           {links.map((singleLink, index) => {
             const { href, title } = singleLink;
             return (
               <Link key={index} to={href}>
-                <p>{title}</p>
+                <p>{title.toUpperCase()}</p>
               </Link>
             );
           })}
