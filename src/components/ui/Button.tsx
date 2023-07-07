@@ -15,9 +15,9 @@ const Button: FC<Props> = ({ isDark, children, className }) => {
   return (
     <button
       type="button"
-      className={`${
+      className={`hover:bg-secondary-peach rounded-lg font-medium text-base-mobile p-4.5 ${
         isDark ? buttonClasses.dark : buttonClasses.light
-      } hover:bg-secondary-peach rounded-lg font-medium text-base-mobile p-4.5 ${className}`}
+      } ${className && className}`}
     >
       {children}
     </button>

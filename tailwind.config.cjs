@@ -48,6 +48,7 @@ module.exports = {
         15: "3.75rem",
         21.25: "5.3125rem",
         30: "7.5rem",
+        41: "10.25rem",
       },
       letterSpacing: {
         "mega-wide": "0.3125em",

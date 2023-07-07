@@ -14,28 +14,37 @@ import ImageGraphicDesignDesktop from "../../assets/home/desktop/image-graphic-d
 
 const TileContainerHome = () => {
   return (
-    <section className="flex flex-col items-center justify-center gap-6 my-30">
-      <Tile
-        overlay
-        text="WEB DESIGN"
-        imageDesktop={ImageWebDesignDesktopLarge}
-        imageTablet={ImageWebDesignTablet}
-        imageMobile={ImageWebDesignMobile}
-      />
-      <Tile
-        overlay
-        text="APP DESIGN"
-        imageDesktop={ImageAppDesignDesktop}
-        imageTablet={ImageAppDesignTablet}
-        imageMobile={ImageAppDesignMobile}
-      />
-      <Tile
-        overlay
-        text="GRAPHIC DESIGN"
-        imageDesktop={ImageGraphicDesignDesktop}
-        imageTablet={ImageGraphicDesignTablet}
-        imageMobile={ImageGraphicDesignMobile}
-      />
+    <section className="flex flex-col items-center justify-center gap-6 lg:gap-3.5 my-30 lg:grid lg:grid-rows-2 lg:grid-cols-2">
+      <div className="lg:row-span-2">
+        <Tile
+          overlay
+          text="WEB DESIGN"
+          imageDesktop={ImageWebDesignDesktopLarge}
+          imageTablet={ImageWebDesignTablet}
+          imageMobile={ImageWebDesignMobile}
+          href="/web-design"
+        />
+      </div>
+      <div>
+        <Tile
+          overlay
+          text="APP DESIGN"
+          imageDesktop={ImageAppDesignDesktop}
+          imageTablet={ImageAppDesignTablet}
+          imageMobile={ImageAppDesignMobile}
+          href="/app-design"
+        />
+      </div>
+      <div>
+        <Tile
+          overlay
+          text="GRAPHIC DESIGN"
+          imageDesktop={ImageGraphicDesignDesktop}
+          imageTablet={ImageGraphicDesignTablet}
+          imageMobile={ImageGraphicDesignMobile}
+          href="/graphic-design"
+        />
+      </div>
     </section>
   );
 };

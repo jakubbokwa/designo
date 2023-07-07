@@ -7,7 +7,7 @@ import links from "../../helpers/links";
 
 const Header = () => {
   return (
-    <header className="max-w-1440 flex justify-between align-center px-6 py-8.5 md:px-10 md:py-16">
+    <header className="max-w-1440 flex justify-between align-center px-6 py-8.5 md:px-10 md:py-16 lg:px-41">
       <Link to="/">
         <img src={LogoDark} alt="Dark logo of Designo" className="logo" />
       </Link>

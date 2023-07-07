@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div className="flex flex-col h-full justify-between">
       <Header />
-      <div className="flex-1 content max-w-1440">
+      <div className="flex-1 content max-w-1440 md:px-10 lg:px-41">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

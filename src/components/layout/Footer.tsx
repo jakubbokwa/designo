@@ -12,8 +12,8 @@ const Footer = () => {
   return (
     <footer className="-mt-[70px]">
       <CallToAction />
-      <div className="bg-primary-dark text-white flex flex-col items-center px-6 md:px-10 pb-16 md:pb-20 pt-[263px]">
-        <div className="w-full flex flex-col md:flex-row flex-wrap items-center md:justify-between">
+      <div className="bg-primary-dark text-white flex flex-col items-center px-6 md:px-10 lg:px-41 pb-16 md:pb-20 pt-[263px]">
+        <div className="w-full flex flex-col md:flex-row flex-wrap items-center md:justify-between lg:mx-41 xl:max-w-[1111px]">
           <img src={LogoLight} alt="Light logo of Designo" className="logo" />
           <div className="h-0 w-full border-b border-b-white/10 my-8 md:order-last" />
           <div className="flex flex-col items-center gap-8 md:gap-10.5 md:flex-row">
@@ -29,8 +29,8 @@ const Footer = () => {
             })}
           </div>
         </div>
-        <div className="md:w-full md:flex items-center justify-between">
-          <div className="my-10 md:my-0 flex flex-col md:flex-row items-center text-center md:text-left gap-10 text-white/50">
+        <div className="lg:mx-41 xl:max-w-[1111px] lg:w-full">
+          <div className="my-10 md:my-0 flex flex-col md:flex-row lg:justify-between items-center text-center md:text-left gap-10 text-white/50">
             {footerInfo.map((singleInformation, index) => {
               const { title, lineOne, lineTwo } = singleInformation;
               return (
@@ -41,8 +41,8 @@ const Footer = () => {
                 </div>
               );
             })}
+            <Icons />
           </div>
-          <Icons />
         </div>
       </div>
     </footer>

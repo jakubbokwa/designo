@@ -23,14 +23,13 @@ const Tile: FC<Props> = ({
   href = "#",
 }) => {
   return (
-    <div
-      className={`${
-        overlay ? "bg-gradient-to-r from-black/[0.35] to-black/[0.35]" : ""
-      } relative overflow-hidden mx-6 flex items-center justify-center rounded-2xl`}
-    >
-      <Link to={href}>
+    <div className="relative overflow-hidden mx-6 lg:mx-0 flex items-center justify-center rounded-2xl">
+      {overlay && (
+        <div className="absolute bg-black/40 w-full h-full overflow-hidden" />
+      )}
+      <Link to={href} className="relative">
         <picture>
-          <source media="(min-width:1280px)" srcSet={imageDesktop} />
+          <source media="(min-width:1024px)" srcSet={imageDesktop} />
           <source media="(min-width:768px)" srcSet={imageTablet} />
           <img
             className="relative -z-10 min-w-full min-h-full"
@@ -38,8 +37,8 @@ const Tile: FC<Props> = ({
             alt=""
           ></img>
         </picture>
-        <div className="absolute top-[90px] md:top-[45px] w-max left-0 right-0 mx-auto text-center flex flex-col md:gap-6">
-          <p className="mb-3 text-4xl-mobile md:text-4xl text-white font-medium">
+        <div className="absolute top-1/3 md:top-1/4 lg:top-[35%] w-max left-0 right-0 mx-auto text-center flex flex-col md:gap-6 lg:gap-0">
+          <p className="mb-3 text-4xl-mobile md:text-4xl lg:text-3xl xl:text-4xl text-white font-medium">
             {text}
           </p>
           <div className="flex items-center justify-center">
