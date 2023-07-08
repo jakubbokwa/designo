@@ -6,6 +6,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        xs: "425px",
+      },
       fontFamily: {
         sans: ["Jost", ...defaultTheme.fontFamily.sans],
       },
@@ -15,6 +18,7 @@ module.exports = {
         "secondary-peach": "#ffad9b",
         "secondary-dark": "#333136",
         "secondary-grey": "#f1f3f5",
+        "tertiary-peach": "#FDF3F0",
       },
       fontSize: {
         base: ["1rem", "1.625rem"],
@@ -43,6 +47,7 @@ module.exports = {
       },
       spacing: {
         4.5: "1.125rem",
+        7.5: "1.875rem",
         8.5: "2.125rem",
         10.5: "2.625rem",
         15: "3.75rem",

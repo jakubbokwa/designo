@@ -9,7 +9,6 @@ type Props = {
   imageMobile: string;
   text: string;
   subtext?: string;
-  overlay?: boolean;
   href?: string;
 };
 
@@ -19,18 +18,15 @@ const Tile: FC<Props> = ({
   imageTablet,
   text,
   subtext = "VIEW PROJECTS",
-  overlay,
   href = "#",
 }) => {
   return (
-    <div className="relative overflow-hidden mx-6 lg:mx-0 flex items-center justify-center rounded-2xl">
-      {overlay && (
-        <div className="absolute bg-black/40 w-full h-full overflow-hidden" />
-      )}
-      <Link to={href} className="relative">
+    <div className="relative overflow-hidden flex items-center justify-center rounded-2xl w-full">
+      <Link to={href} className="relative w-full">
+        <div className="absolute bg-black/40 w-full h-full overflow-hidden hover:bg-primary-peach/60" />
         <picture>
           <source media="(min-width:1024px)" srcSet={imageDesktop} />
-          <source media="(min-width:768px)" srcSet={imageTablet} />
+          <source media="(min-width:425px)" srcSet={imageTablet} />
           <img
             className="relative -z-10 min-w-full min-h-full"
             src={imageMobile}

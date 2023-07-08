@@ -1,5 +1,5 @@
 import Hero from "../components/home/Hero";
-import TileContainerHome from "../components/home/TileContainerHome";
+import TileContainerHome from "../components/tile/TileContainerHome";
 import IllustrationsContainerHome from "../components/home/IllustrationsContainerHome";
 
 const Home = () => {

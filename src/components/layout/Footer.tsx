@@ -10,18 +10,20 @@ import Icons from "../icons/Icons";
 
 const Footer = () => {
   return (
-    <footer className="-mt-[70px]">
+    <footer className="-mt-[70px] xl:flex flex-col items-center">
       <CallToAction />
-      <div className="bg-primary-dark text-white flex flex-col items-center px-6 md:px-10 lg:px-41 pb-16 md:pb-20 pt-[263px]">
+      <div className="bg-primary-dark text-white flex flex-col items-center px-6 md:px-10 lg:px-41 pb-16 md:pb-20 pt-[263px] xl:w-full">
         <div className="w-full flex flex-col md:flex-row flex-wrap items-center md:justify-between lg:mx-41 xl:max-w-[1111px]">
-          <img src={LogoLight} alt="Light logo of Designo" className="logo" />
+          <Link to="/">
+            <img src={LogoLight} alt="Light logo of Designo" className="logo" />
+          </Link>
           <div className="h-0 w-full border-b border-b-white/10 my-8 md:order-last" />
           <div className="flex flex-col items-center gap-8 md:gap-10.5 md:flex-row">
             {links.map((singleLink, index) => {
               const { href, title } = singleLink;
               return (
                 <Link key={index} to={href}>
-                  <p className="text-base-mobile tracking-widest">
+                  <p className="text-base-mobile tracking-widest hover:underline hover:underline-offset-2">
                     {title.toUpperCase()}
                   </p>
                 </Link>

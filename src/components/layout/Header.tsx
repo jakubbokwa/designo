@@ -20,7 +20,9 @@ const Header = () => {
             const { href, title } = singleLink;
             return (
               <Link key={index} to={href}>
-                <p>{title.toUpperCase()}</p>
+                <p className="hover:underline hover:underline-offset-2">
+                  {title.toUpperCase()}
+                </p>
               </Link>
             );
           })}
