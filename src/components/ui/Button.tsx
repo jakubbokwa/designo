@@ -6,7 +6,7 @@ type Props = {
   className?: string;
 };
 
-const Button: FC<Props> = ({ isDark, children, className }) => {
+const Button: FC<Props> = ({ isDark = true, children, className }) => {
   const buttonClasses = {
     light: "bg-white text-secondary-dark hover:text-white",
     dark: "bg-primary-peach text-white",

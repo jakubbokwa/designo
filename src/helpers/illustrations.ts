@@ -27,7 +27,7 @@ const illustrationsHome = [
   },
 ];
 
-const illustrationsAbout = [
+const illustrationsCities = [
   {
     icon: IllustrationCanada({}),
     title: "CANADA",
@@ -42,4 +42,4 @@ const illustrationsAbout = [
   },
 ];
 
-export { illustrationsHome, illustrationsAbout };
+export { illustrationsHome, illustrationsCities };

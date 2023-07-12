@@ -3,26 +3,24 @@ import { ReactComponent as PatternSmallCircle } from "../../assets/shared/deskto
 
 type Props = {
   children: ReactNode;
-  title?: string;
-  followUp?: ReactNode;
+  title: string;
+  followUp: ReactNode;
 };
 
 const Illustration: FC<Props> = ({ children, title, followUp }) => {
   return (
-    <div className="flex flex-col md:flex-row lg:flex-col items-center text-center mx-6 mb-20 lg:mx-0 lg:mb-0 last:mb-0">
-      <div className="relative flex justify-center">
+    <div className="flex flex-col md:flex-row md:gap-12 items-center lg:flex-col lg:gap-0">
+      <div>
         <div className="absolute">
           <PatternSmallCircle />
         </div>
         <div className="relative">{children}</div>
       </div>
-      <div className="md:text-left md:ml-12 lg:ml-0 lg:text-center lg:mt-12">
-        {title && (
-          <h2 className="text-xl font-medium mt-10 md:mt-0 mb-8 md:mb-4 lg:mb-9">
-            {title}
-          </h2>
-        )}
-        <span>{followUp && followUp}</span>
+      <div className="text-center md:text-left lg:text-center max-w-screen-xs lg:max-w-screen-lg">
+        <h2 className="text-xl font-medium mt-12 mb-8 md:my-4 lg:mt-12 lg:mb-8">
+          {title}
+        </h2>
+        <span>{followUp}</span>
       </div>
     </div>
   );

@@ -21,9 +21,9 @@ const Tile: FC<Props> = ({
   href = "#",
 }) => {
   return (
-    <div className="relative overflow-hidden flex items-center justify-center rounded-2xl w-full">
+    <div className="group relative overflow-hidden flex items-center justify-center rounded-2xl w-full">
       <Link to={href} className="relative w-full">
-        <div className="absolute bg-black/40 w-full h-full overflow-hidden hover:bg-primary-peach/60" />
+        <div className="absolute bg-black/40 w-full h-full overflow-hidden group-hover:bg-primary-peach/60" />
         <picture>
           <source media="(min-width:1024px)" srcSet={imageDesktop} />
           <source media="(min-width:425px)" srcSet={imageTablet} />

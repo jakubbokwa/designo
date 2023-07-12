@@ -4,7 +4,7 @@ import { illustrationsHome } from "../../helpers/illustrations";
 
 const IllustrationsContainerHome = () => {
   return (
-    <section className="mx-10 lg:flex lg:gap-7">
+    <section className="mx-6 md:mx-0 flex flex-col gap-20 md:items-center lg:flex-row lg:gap-8 lg:justify-center">
       {illustrationsHome.map((singleIllustration, index) => {
         return (
           <Illustration
