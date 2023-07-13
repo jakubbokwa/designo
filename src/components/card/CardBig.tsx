@@ -8,7 +8,7 @@ type CardProps = {
   title: string;
   baseClassName?: string;
   pictureClassName?: string;
-  style?: "dark" | "light";
+  isLocation?: boolean;
 };
 
 const CardBig = ({
@@ -19,7 +19,7 @@ const CardBig = ({
   title,
   baseClassName,
   pictureClassName,
-  style = "light",
+  isLocation,
 }: CardProps) => {
   return (
     <div className={`xs:rounded-xl lg:flex overflow-hidden ${baseClassName}`}>
@@ -29,7 +29,9 @@ const CardBig = ({
         <img
           src={imageMobile}
           alt={title}
-          className="w-full h-full lg:w-auto object-cover"
+          className={`w-full h-full lg:w-auto object-cover ${
+            isLocation && "md:rounded-xl"
+          }`}
         />
       </picture>
       {children || title}

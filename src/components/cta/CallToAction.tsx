@@ -17,7 +17,9 @@ const CallToAction = () => {
             how our expertise can help your business grow.
           </p>
         </div>
-        <Button className="lg:whitespace-nowrap">GET IN TOUCH</Button>
+        <Button isDark={false} className="lg:whitespace-nowrap">
+          GET IN TOUCH
+        </Button>
       </div>
     </div>
   );

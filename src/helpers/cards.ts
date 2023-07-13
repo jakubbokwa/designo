@@ -25,6 +25,13 @@ import aboutRealDesktop from "../assets/about/desktop/image-real-deal.jpg";
 import aboutRealTablet from "../assets/about/tablet/image-real-deal.jpg";
 import aboutRealMobile from "../assets/about/mobile/image-real-deal.jpg";
 
+import locationsCanadaDesktop from "../assets/locations/desktop/image-map-canada.png";
+import locationsCanadaTablet from "../assets/locations/tablet/image-map-canada.png";
+import locationsAustraliaDesktop from "../assets/locations/desktop/image-map-australia.png";
+import locationsAustraliaTablet from "../assets/locations/tablet/image-map-australia.png";
+import locationsUkDesktop from "../assets/locations/desktop/image-map-united-kingdom.png";
+import locationsUkTablet from "../assets/locations/tablet/image-map-uk.png";
+
 const cards = {
   webDesign: [
     {
@@ -137,15 +144,55 @@ const cardsBig = {
       imageMobile: aboutRealMobile,
     },
   ],
+  locations: [
+    {
+      title: "Canada",
+      imageDesktop: locationsCanadaDesktop,
+      imageTablet: locationsCanadaTablet,
+      address: {
+        name: "Designo Central Office",
+        street: "3886 Wellington Street",
+        city: "Toronto, Ontario M9C 3J5",
+        phone: "+1 253-863-8967",
+        mail: "contact@designo.co",
+      },
+    },
+    {
+      title: "Australia",
+      imageDesktop: locationsAustraliaDesktop,
+      imageTablet: locationsAustraliaTablet,
+      address: {
+        name: "Designo AU Office",
+        street: "19 Balonne Street",
+        city: "New South Wales 2443",
+        phone: "(02) 6720 9092",
+        mail: "contact@designo.au",
+      },
+    },
+    {
+      title: "United Kingdom",
+      imageDesktop: locationsUkDesktop,
+      imageTablet: locationsUkTablet,
+      address: {
+        name: "Designo UK Office",
+        street: "13 Colorado Way",
+        city: "Rhyd-y-fro SA8 9GA",
+
+        phone: "078 3115 1400",
+        mail: "contact@designo.uk",
+      },
+    },
+  ],
 };
 
 const { webDesign, appDesign, graphicDesign } = cards;
 
-const { aboutUs } = cardsBig;
+const { aboutUs, locations } = cardsBig;
 
 export {
   webDesign as cardsWebDesign,
   appDesign as cardsAppDesign,
   graphicDesign as cardsGraphicDesign,
   aboutUs as cardsBigAboutUs,
+  locations as cardsBigLocations,
 };
