@@ -6,13 +6,15 @@ type Props = {
   children: ReactNode;
   className?: string;
   href?: string;
+  type: "button" | "submit";
 };
 
 const Button: FC<Props> = ({
   isDark = true,
   children,
   className,
-  href = "/",
+  href,
+  type = "button",
 }) => {
   const buttonClasses = {
     light: "bg-white text-secondary-dark hover:text-white",
@@ -21,7 +23,7 @@ const Button: FC<Props> = ({
 
   return (
     <button
-      type="button"
+      type={type}
       className={`hover:bg-secondary-peach rounded-lg font-medium text-base-mobile p-4.5 ${
         isDark ? buttonClasses.dark : buttonClasses.light
       } ${className && className}`}
