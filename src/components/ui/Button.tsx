@@ -1,12 +1,19 @@
 import { FC, ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 type Props = {
   isDark?: boolean;
   children: ReactNode;
   className?: string;
+  href?: string;
 };
 
-const Button: FC<Props> = ({ isDark = true, children, className }) => {
+const Button: FC<Props> = ({
+  isDark = true,
+  children,
+  className,
+  href = "/",
+}) => {
   const buttonClasses = {
     light: "bg-white text-secondary-dark hover:text-white",
     dark: "bg-primary-peach text-white",
@@ -19,7 +26,7 @@ const Button: FC<Props> = ({ isDark = true, children, className }) => {
         isDark ? buttonClasses.dark : buttonClasses.light
       } ${className && className}`}
     >
-      {children}
+      {href ? <Link to={href}>{children}</Link> : <>{children}</>}
     </button>
   );
 };
