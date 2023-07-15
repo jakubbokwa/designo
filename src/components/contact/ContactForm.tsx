@@ -4,7 +4,7 @@ import { ReactComponent as ContactDecorationDesktop } from "../../assets/contact
 
 const ContactForm = () => {
   return (
-    <section className="bg-primary-peach text-white py-18 lg:py-14 px-6 lg:px-24 sm:px-14 relative mb-40 md:rounded-xl overflow-hidden lg:flex lg:items-center lg:justify-between lg:gap-24">
+    <section className="bg-primary-peach text-white py-18 lg:py-14 px-6 xl:px-24 sm:px-14 relative mb-40 md:rounded-xl overflow-hidden lg:flex lg:items-center lg:justify-between lg:gap-12 xl:gap-24">
       <ContactDecorationMobile className="sm:hidden absolute top-0 -left-1/3" />
       <ContactDecorationDesktop className="hidden sm:block absolute -top-[16%] -left-1/3 lg:bottom-0 lg:left-0 lg:top-auto" />
       <div className="relative text-center sm:text-left mb-12 lg:w-[55%]">
