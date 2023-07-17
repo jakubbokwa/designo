@@ -10,11 +10,7 @@ const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div
-      className={`flex flex-col justify-between ${
-        isMenuOpen && "fixed w-full"
-      }`}
-    >
+    <div className={`flex flex-col justify-between ${isMenuOpen && `w-full`}`}>
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div className="flex-1 content max-w-1440 md:px-10 lg:px-41">
         <Routes>

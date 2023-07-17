@@ -10,7 +10,7 @@ import Icons from "../icons/Icons";
 
 const Footer = () => {
   return (
-    <footer className="-mt-[70px] xl:flex flex-col items-center relative -z-10">
+    <footer className="-mt-[70px] xl:flex flex-col items-center relative z-10">
       <CallToAction />
       <div className="bg-primary-dark text-white flex flex-col items-center px-6 md:px-10 lg:px-41 pb-16 md:pb-20 pt-[263px] xl:w-full">
         <div className="w-full flex flex-col md:flex-row flex-wrap items-center md:justify-between lg:mx-41 xl:max-w-[1111px]">

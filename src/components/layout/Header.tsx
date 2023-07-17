@@ -18,9 +18,9 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderType) => {
   const scrollDirection = useScrollDirection();
   return (
     <div
-      className={`z-50 sticky md:relative bg-white ${
-        scrollDirection === "down" ? "-top-[95px] md:top-0" : "top-0"
-      } h-[95px] md:h-full transition-all duration-500`}
+      className={`
+      ${scrollDirection === "down" ? "-top-[95px] md:top-0" : "top-0"}
+      z-50 sticky md:relative bg-white h-[95px] md:h-full transition-all duration-500`}
     >
       <header
         className="max-w-1440 flex justify-between align-center px-6 py-8.5 md:px-10 md:py-16 lg:px-41"
@@ -38,13 +38,13 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderType) => {
             {isMenuOpen ? (
               <Close
                 onClick={() => {
-                  setIsMenuOpen(false);
+                  setIsMenuOpen(!isMenuOpen);
                 }}
               />
             ) : (
               <Hamburger
                 onClick={() => {
-                  setIsMenuOpen(true);
+                  setIsMenuOpen(!isMenuOpen);
                 }}
               />
             )}
@@ -63,33 +63,35 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderType) => {
           </div>
         </nav>
       </header>
-      {isMenuOpen && (
-        <div className="w-full absolute z-50 md:hidden">
-          <div className="bg-primary-dark text-white text-2xl tracking-widest px-6 py-12 flex flex-col gap-y-8">
-            {links.map((singleLink, index) => {
-              const { href, title } = singleLink;
-              return (
-                <NavLink
-                  key={index}
-                  to={href}
-                  className={({ isActive }) => {
-                    return isActive ? "underline underline-offset-4" : "";
-                  }}
-                  style={{
-                    WebkitTapHighlightColor: "transparent",
-                  }}
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  <p>{title.toUpperCase()}</p>
-                </NavLink>
-              );
-            })}
-          </div>
-          <Overlay setIsMenuOpen={setIsMenuOpen} />
+      <div
+        className={`w-full absolute z-50 md:invisible ${
+          isMenuOpen ? "visible" : "invisible"
+        }`}
+      >
+        <div className="bg-primary-dark text-white text-2xl tracking-widest px-6 py-12 flex flex-col gap-y-8">
+          {links.map((singleLink, index) => {
+            const { href, title } = singleLink;
+            return (
+              <NavLink
+                key={index}
+                to={href}
+                className={({ isActive }) => {
+                  return isActive ? "underline underline-offset-4" : "";
+                }}
+                style={{
+                  WebkitTapHighlightColor: "transparent",
+                }}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                }}
+              >
+                <p>{title.toUpperCase()}</p>
+              </NavLink>
+            );
+          })}
         </div>
-      )}
+        <Overlay setIsMenuOpen={setIsMenuOpen} />
+      </div>
     </div>
   );
 };
