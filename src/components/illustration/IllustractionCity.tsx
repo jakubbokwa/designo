@@ -15,7 +15,7 @@ const IllustrationCity: FC<Props> = ({ children, title }) => {
       </div>
       <div className="relative">{children}</div>
       <h2 className="text-xl font-medium mt-12 mb-8">{title}</h2>
-      <Button>SEE LOCATION</Button>
+      <Button type="button">SEE LOCATION</Button>
     </div>
   );
 };

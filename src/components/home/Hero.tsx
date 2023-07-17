@@ -20,7 +20,9 @@ const Hero = () => {
             experiences. Find out more about our services.
           </p>
         </div>
-        <Button className="z-20">LEARN MORE</Button>
+        <Button type="button" className="z-20">
+          LEARN MORE
+        </Button>
       </div>
       <img
         src={ImageHeroPhone}

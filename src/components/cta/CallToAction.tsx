@@ -17,7 +17,12 @@ const CallToAction = () => {
             how our expertise can help your business grow.
           </p>
         </div>
-        <Button isDark={false} className="lg:whitespace-nowrap" href="/contact">
+        <Button
+          type="button"
+          isDark={false}
+          className="lg:whitespace-nowrap"
+          href="/contact"
+        >
           GET IN TOUCH
         </Button>
       </div>
